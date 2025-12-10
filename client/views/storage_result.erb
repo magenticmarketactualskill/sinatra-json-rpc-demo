@@ -1,0 +1,33 @@
+<h1>Storage Operation Result</h1>
+
+<div class="request-details">
+    <h4>Request Details</h4>
+    <p><strong>Operation:</strong> <%= @operation %></p>
+    <% if @key %>
+        <p><strong>Key:</strong> <%= @key %></p>
+    <% end %>
+    <% if @value %>
+        <p><strong>Value:</strong> <%= @value %></p>
+    <% end %>
+</div>
+
+<div class="result <%= @result['success'] ? 'success' : 'error' %>">
+    <%= @formatted_result %>
+</div>
+
+<% if @result['success'] %>
+    <div class="json-display">
+        <strong>Raw JSON-RPC Response:</strong><br>
+        <%= JSON.pretty_generate(@result) %>
+    </div>
+<% else %>
+    <div class="json-display">
+        <strong>Error Details:</strong><br>
+        <%= JSON.pretty_generate(@result['error']) %>
+    </div>
+<% end %>
+
+<div class="nav">
+    <a href="/storage">← Back to Storage</a>
+    <a href="/">Home</a>
+</div>

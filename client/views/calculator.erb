@@ -1,0 +1,51 @@
+<h1>Calculator Methods</h1>
+
+<div class="method-section">
+    <h3>Addition</h3>
+    <form action="/calculator/add" method="post">
+        <div class="form-group">
+            <label for="add_a">First Number:</label>
+            <input type="number" id="add_a" name="a" step="any" required>
+        </div>
+        <div class="form-group">
+            <label for="add_b">Second Number:</label>
+            <input type="number" id="add_b" name="b" step="any" required>
+        </div>
+        <button type="submit">Add Numbers</button>
+    </form>
+</div>
+
+<div class="method-section">
+    <h3>Multiplication</h3>
+    <form action="/calculator/multiply" method="post">
+        <div class="form-group">
+            <label for="mult_a">First Number:</label>
+            <input type="number" id="mult_a" name="a" step="any" required>
+        </div>
+        <div class="form-group">
+            <label for="mult_b">Second Number:</label>
+            <input type="number" id="mult_b" name="b" step="any" required>
+        </div>
+        <button type="submit">Multiply Numbers</button>
+    </form>
+</div>
+
+<div class="method-section">
+    <h3>Division</h3>
+    <form action="/calculator/divide" method="post">
+        <div class="form-group">
+            <label for="div_a">Dividend:</label>
+            <input type="number" id="div_a" name="a" step="any" required>
+        </div>
+        <div class="form-group">
+            <label for="div_b">Divisor:</label>
+            <input type="number" id="div_b" name="b" step="any" required>
+        </div>
+        <button type="submit">Divide Numbers</button>
+    </form>
+</div>
+
+<div class="nav">
+    <a href="/">← Back to Home</a>
+    <a href="/strings">String Operations →</a>
+</div>

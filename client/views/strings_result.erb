@@ -1,0 +1,28 @@
+<h1>String Operation Result</h1>
+
+<div class="request-details">
+    <h4>Request Details</h4>
+    <p><strong>Operation:</strong> <%= @operation %></p>
+    <p><strong>Input Text:</strong> "<%= @text %>"</p>
+</div>
+
+<div class="result <%= @result['success'] ? 'success' : 'error' %>">
+    <%= @formatted_result %>
+</div>
+
+<% if @result['success'] %>
+    <div class="json-display">
+        <strong>Raw JSON-RPC Response:</strong><br>
+        <%= JSON.pretty_generate(@result) %>
+    </div>
+<% else %>
+    <div class="json-display">
+        <strong>Error Details:</strong><br>
+        <%= JSON.pretty_generate(@result['error']) %>
+    </div>
+<% end %>
+
+<div class="nav">
+    <a href="/strings">← Back to String Operations</a>
+    <a href="/">Home</a>
+</div>

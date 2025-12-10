@@ -1,0 +1,47 @@
+<h1>JSON-RPC Client Demo</h1>
+
+<p>Welcome to the JSON-RPC client demonstration. This web interface allows you to test various JSON-RPC methods provided by the server.</p>
+
+<div class="nav">
+    <a href="/calculator">🧮 Calculator</a>
+    <a href="/strings">📝 String Operations</a>
+    <a href="/storage">💾 Data Storage</a>
+</div>
+
+<div class="method-section">
+    <h3>Available RPC Methods</h3>
+    
+    <h4>Calculator Methods</h4>
+    <ul>
+        <li><strong>add(a, b)</strong> - Returns sum of two numbers</li>
+        <li><strong>multiply(a, b)</strong> - Returns product of two numbers</li>
+        <li><strong>divide(a, b)</strong> - Returns division result</li>
+    </ul>
+
+    <h4>String Methods</h4>
+    <ul>
+        <li><strong>reverse_string(text)</strong> - Returns reversed string</li>
+        <li><strong>uppercase(text)</strong> - Returns uppercased string</li>
+        <li><strong>word_count(text)</strong> - Returns word count</li>
+    </ul>
+
+    <h4>Storage Methods</h4>
+    <ul>
+        <li><strong>store_data(key, value)</strong> - Stores key-value pair</li>
+        <li><strong>retrieve_data(key)</strong> - Retrieves stored value</li>
+        <li><strong>list_keys()</strong> - Returns all stored keys</li>
+    </ul>
+</div>
+
+<div class="method-section">
+    <h3>How it Works</h3>
+    <p>This client application communicates with a JSON-RPC 2.0 server running on port 4567. Each form submission generates a JSON-RPC request and displays the formatted response.</p>
+    
+    <p>The server implements proper JSON-RPC 2.0 protocol including:</p>
+    <ul>
+        <li>Standard request/response format</li>
+        <li>Error handling with proper error codes</li>
+        <li>Support for both positional and named parameters</li>
+        <li>Comprehensive logging</li>
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+<h1>Data Storage</h1>
+
+<div class="method-section">
+    <h3>Store Data</h3>
+    <form action="/storage/store" method="post">
+        <div class="form-group">
+            <label for="store_key">Key:</label>
+            <input type="text" id="store_key" name="key" placeholder="Enter key name..." required>
+        </div>
+        <div class="form-group">
+            <label for="store_value">Value:</label>
+            <textarea id="store_value" name="value" placeholder="Enter value to store..." required></textarea>
+        </div>
+        <button type="submit">Store Data</button>
+    </form>
+</div>
+
+<div class="method-section">
+    <h3>Retrieve Data</h3>
+    <form action="/storage/retrieve" method="post">
+        <div class="form-group">
+            <label for="retrieve_key">Key:</label>
+            <input type="text" id="retrieve_key" name="key" placeholder="Enter key to retrieve..." required>
+        </div>
+        <button type="submit">Retrieve Data</button>
+    </form>
+</div>
+
+<div class="method-section">
+    <h3>List All Keys</h3>
+    <form action="/storage/list" method="post">
+        <p>Click the button below to list all stored keys:</p>
+        <button type="submit">List All Keys</button>
+    </form>
+</div>
+
+<div class="nav">
+    <a href="/strings">← String Operations</a>
+    <a href="/">Home</a>
+</div>

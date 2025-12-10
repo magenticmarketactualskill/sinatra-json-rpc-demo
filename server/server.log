@@ -1,0 +1,3 @@
+I, [2025-12-10T14:48:12.347658 #20338]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "add", "params": [5, 3], "id": 1}
+I, [2025-12-10T14:48:12.347769 #20338]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":8,"id":1}
+127.0.0.1 - - [10/Dec/2025:14:48:12 -0500] "POST /jsonrpc HTTP/1.1" 200 35 0.0011
