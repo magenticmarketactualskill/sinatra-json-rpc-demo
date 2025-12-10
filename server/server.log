@@ -1,3 +1,40 @@
 I, [2025-12-10T14:48:12.347658 #20338]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "add", "params": [5, 3], "id": 1}
 I, [2025-12-10T14:48:12.347769 #20338]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":8,"id":1}
 127.0.0.1 - - [10/Dec/2025:14:48:12 -0500] "POST /jsonrpc HTTP/1.1" 200 35 0.0011
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "GET /jsonrpc HTTP/1.1" 404 475 0.0016
+I, [2025-12-10T15:00:42.550847 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "add", "params": [5, 3], "id": 1}
+I, [2025-12-10T15:00:42.550939 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":8,"id":1}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 35 0.0004
+I, [2025-12-10T15:00:42.559045 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "multiply", "params": [4, 7], "id": 2}
+I, [2025-12-10T15:00:42.559107 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":28,"id":2}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 36 0.0003
+I, [2025-12-10T15:00:42.566814 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "divide", "params": [10, 2], "id": 3}
+I, [2025-12-10T15:00:42.566877 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":5.0,"id":3}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 37 0.0003
+I, [2025-12-10T15:00:42.574811 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "reverse_string", "params": ["Hello World"], "id": 4}
+I, [2025-12-10T15:00:42.574865 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":"dlroW olleH","id":4}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 47 0.0003
+I, [2025-12-10T15:00:42.581997 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "uppercase", "params": ["json-rpc demo"], "id": 5}
+I, [2025-12-10T15:00:42.582051 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":"JSON-RPC DEMO","id":5}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 49 0.0003
+I, [2025-12-10T15:00:42.588602 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "word_count", "params": ["This is a test sentence"], "id": 6}
+I, [2025-12-10T15:00:42.588653 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":5,"id":6}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 35 0.0003
+I, [2025-12-10T15:00:42.595580 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "store_data", "params": ["user1", {"name": "John", "age": 30}], "id": 7}
+I, [2025-12-10T15:00:42.595635 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":{"success":true,"message":"Data stored successfully","key":"user1"},"id":7}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 101 0.0003
+I, [2025-12-10T15:00:42.601875 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "retrieve_data", "params": ["user1"], "id": 8}
+I, [2025-12-10T15:00:42.601916 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":{"success":true,"key":"user1","value":{"name":"John","age":30}},"id":8}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 97 0.0002
+I, [2025-12-10T15:00:42.608794 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "list_keys", "params": [], "id": 9}
+I, [2025-12-10T15:00:42.608843 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","result":{"keys":["user1"],"count":1},"id":9}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 62 0.0002
+I, [2025-12-10T15:00:42.615487 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "invalid_method", "params": [], "id": 10}
+I, [2025-12-10T15:00:42.615546 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found","data":"The method 'invalid_method' does not exist"},"id":10}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 130 0.0003
+I, [2025-12-10T15:00:42.621880 #23155]  INFO -- : Incoming JSON-RPC request: {"jsonrpc": "2.0", "method": "divide", "params": [10, 0], "id": 11}
+I, [2025-12-10T15:00:42.621930 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","error":{"code":-32602,"message":"Invalid params","data":"Division by zero is not allowed"},"id":11}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 117 0.0002
+I, [2025-12-10T15:00:42.628412 #23155]  INFO -- : Incoming JSON-RPC request: {"invalid": "json"
+I, [2025-12-10T15:00:42.628466 #23155]  INFO -- : Outgoing JSON-RPC response: {"jsonrpc":"2.0","error":{"code":-32700,"message":"Parse error","data":"Invalid JSON: expected ',' or '}' after object value, got: EOF at line 1 column 19"},"id":null}
+127.0.0.1 - - [10/Dec/2025:15:00:42 -0500] "POST /jsonrpc HTTP/1.1" 200 167 0.0003
